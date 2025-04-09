@@ -193,7 +193,7 @@ private inline fun <reified E : Enum<E>> readEnumSafe(): E {
 		try {
 			val input = readln().uppercase()
 			return enumValueOf<E>(input)
-		} catch (e: Exception) {
+		} catch (_: Exception) {
 			print("Error! Enter the correct value: ")
 		}
 	}
@@ -202,7 +202,7 @@ private inline fun <reified E : Enum<E>> readEnumSafe(): E {
 private fun readBooleanSafe(): Boolean {
 	return try {
 		readln().toBoolean()
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		print("Error! Enter the correct value: ")
 		readBooleanSafe()
 	}

@@ -140,7 +140,7 @@ private fun bfs(start: Int, adjMatrix: Array<IntArray>, distances: Array<IntArra
 private fun readIntSafe(): Int {
 	return try {
 		readln().toInt()
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		print("Error! Enter the correct value: ")
 		readIntSafe()
 	}
@@ -153,7 +153,7 @@ private fun readIntSafeRange(range: IntRange): Int {
 			throw Exception()
 		}
 		num
-	} catch (e: Exception) {
+	} catch (_: Exception) {
 		print("Error! Enter the correct value: ")
 		readIntSafeRange(range)
 	}
